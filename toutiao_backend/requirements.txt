@@ -1,0 +1,25 @@
+# 版本组合已在 Python 3.13 + macOS 上实际安装验证（2026-10）
+# 如需升级，请新建虚拟环境装一遍并跑通 README 的启动步骤后再提交
+
+# Web 框架与 ASGI 服务器
+fastapi==0.143.3
+uvicorn[standard]==0.54.0
+
+# 数据库 ORM 与异步 MySQL 驱动
+SQLAlchemy[asyncio]==2.1.5
+aiomysql==0.3.2
+# MySQL 8 默认 caching_sha2_password 认证需要
+cryptography==50.0.2
+
+# 数据校验
+pydantic==2.14.1
+
+# 密码哈希：passlib 1.7.4 与 bcrypt 4.1+ 不兼容，必须锁 4.0.1
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+
+# Redis 异步客户端
+redis==8.1.0
+
+# .env 加载
+python-dotenv==1.2.4
